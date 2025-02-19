@@ -1,5 +1,5 @@
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -9,32 +9,44 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+
+  final appScreens = [
+    const Text("Home"),
+    const Text("Search"),
+    const Text("Cart"),
+    const Text("Profile"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("My Tickets"))),
-      body: Center(child: Text("Ticket info")),
+      body: Center(child: appScreens[0]),
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,
         selectedItemColor: const Color.fromARGB(255, 54, 54, 54),
         showSelectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_home_add_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+            icon: Icon(FontAwesomeIcons.house),
+            activeIcon: Icon(FontAwesomeIcons.houseChimney),
             label: "Home",
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
+            icon: Icon(FontAwesomeIcons.magnifyingGlass),
+            activeIcon: Icon(FontAwesomeIcons.magnifyingGlassMinus),
             label: "Search",
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_access_time_filled),
+            icon: Icon(FontAwesomeIcons.bagShopping),
+            activeIcon: Icon(FontAwesomeIcons.cartPlus),
             label: "Cart",
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_access_time_filled),
+            icon: Icon(FontAwesomeIcons.user),
             label: "Profile",
           ),
         ],
