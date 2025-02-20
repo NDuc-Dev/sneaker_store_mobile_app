@@ -8,8 +8,32 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Container(child: Text("Hello, this is home screen")),
-          Container(child: Text("Hello"))
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Text("Good Morning"),
+                      Text("Sneaker Store"),
+                    ],
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.grey,
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Text("Search icon"),
+                  Text("Empty space"),
+                ],
+              ),
+            ],
+          )
         ],
       ),
     );
