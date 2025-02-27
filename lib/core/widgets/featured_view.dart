@@ -11,8 +11,11 @@ class FeaturedView extends StatelessWidget {
       height: size.width * 0.8,
       child: Container(
         margin: const EdgeInsets.only(right: 16),
-        child: Text("Hello"),
-        decoration: BoxDecoration(color: Colors.white),
+        child: Center(child: Text("Hello")),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+        ),
       ),
     );
   }

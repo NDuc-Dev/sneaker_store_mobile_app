@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snaeaker_store/core/res/media.dart';
 import 'package:snaeaker_store/core/res/styles/app_style.dart';
 import 'package:snaeaker_store/core/widgets/app_double_text.dart';
-import 'package:snaeaker_store/core/widgets/featured_view.dart';
-import 'package:snaeaker_store/core/widgets/product_view.dart';
+import 'package:snaeaker_store/screens/widgets/brand.dart';
+import 'package:snaeaker_store/screens/widgets/new_product.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -63,11 +63,19 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 40),
-                AppDoubleText(bigText: 'Featured', smallText: 'View all'),
-                FeaturedView(),
+                AppDoubleText(
+                  bigText: 'New Products',
+                  smallText: 'View all',
+                  func: () => (),
+                ),
+                NewProduct(),
                 SizedBox(height: 40),
-                AppDoubleText(bigText: 'Hot Products', smallText: 'View all'),
-                ProductView(),
+                AppDoubleText(
+                  bigText: 'Hot Products',
+                  smallText: 'View all',
+                  func: () => (),
+                ),
+                Brand(),
               ],
             ),
           ),
