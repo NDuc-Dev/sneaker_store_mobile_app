@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 40),
                 AppDoubleText(
-                  bigText: 'New Products',
+                  bigText: 'Newest',
                   smallText: 'View all',
                   func: () => (),
                 ),
